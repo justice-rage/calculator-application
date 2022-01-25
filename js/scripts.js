@@ -4,8 +4,8 @@ function add(number1, number2) {
 	return number1 + number2;
 }
 
-function multiply(number1, number2) {
-	return number1 * number2;
+function multiply(number3, number4) {
+	return number3 * number4;
 }
 
 function subtract(number1, number2) {
@@ -24,5 +24,20 @@ $(document).ready(function() {
     const number2 = parseInt($("#add2").val());
     const result = add(number1, number2);
     $("#output").text(result);
+	});
+  $("form#multiply").submit(function(event) {
+    event.preventDefault();
+    const number3 = parseInt($("#multiply1").val());
+    const number4 = parseInt($("#multiply2").val());
+    const result = multiply(number3, number4);
+    $("#output").text(result);
   });
+	$("form#multiply").submit(function(event) {
+    event.preventDefault();
+    const number3 = parseInt($("#multiply1").val());
+    const number4 = parseInt($("#multiply2").val());
+    const result = multiply(number3, number4);
+    $("#output").text(result);
+  });
+
 });
