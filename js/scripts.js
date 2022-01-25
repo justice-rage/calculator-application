@@ -8,12 +8,12 @@ function multiply(number3, number4) {
 	return number3 * number4;
 }
 
-function subtract(number1, number2) {
-	return number1 - number2;
+function subtract(number5, number6) {
+	return number5 - number6;
 }
 
-function divide(number1, number2) {
-	return number1 / number2;
+function divide(number7, number8) {
+	return number7 / number8;
 }
 
 // User Interface Logic
@@ -32,12 +32,18 @@ $(document).ready(function() {
     const result = multiply(number3, number4);
     $("#output").text(result);
   });
-	$("form#multiply").submit(function(event) {
+	$("form#subtract").submit(function(event) {
     event.preventDefault();
-    const number3 = parseInt($("#multiply1").val());
-    const number4 = parseInt($("#multiply2").val());
-    const result = multiply(number3, number4);
+    const number5 = parseInt($("#subtract1").val());
+    const number6 = parseInt($("#subtract2").val());
+    const result = subtract(number5, number6);
     $("#output").text(result);
   });
-
+	$("form#divide").submit(function(event) {
+    event.preventDefault();
+    const number7 = parseInt($("#divide1").val());
+    const number8 = parseInt($("#divide2").val());
+    const result = divide(number7, number8);
+    $("#output").text(result);
+  });
 });
